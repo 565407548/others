@@ -33,7 +33,7 @@ int findElemInMatrix(int *matrix,int row,int col,int elem){
     if(d==1){
       if(matrix[index]<elem){//小于，则继续正向。若行结束，则跳至下行继续
         c++;
-        if(c==col){
+        if(c==col){//跳至下行。右方没有元素，而左方的元素与elem的大小未知，设置d=-1,即之后开始方向比较
           r++;
           c--;
           d=-1;
