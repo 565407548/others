@@ -7,6 +7,8 @@
 求一个数的平方，至少有两种方法：
 1.折半查找法，时间复杂度为：lg(n/PRECISE)
 2.牛顿迭代法
+
+经测试，二者在n为千万级的数据时，运算时间都差不多
  */
 
 double binSearch(int n,double l, double u){
@@ -30,11 +32,18 @@ double binSearch(int n,double l, double u){
 
 //折半查找
 double sqrt_b(int n){
-  return binSearch(n,0,n);
+  if(n<=0){
+    return 0;
+  }else{
+    return binSearch(n,0,n);
+  }  
 }
 
 //牛顿迭代
 double sqrt_n(int n){
+  if(n<=0){
+    return 0;
+  }
   double x0,y0,x1,y1;
   x0=n/2.0;
   y0=x0*x0-n;

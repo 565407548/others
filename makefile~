@@ -1,0 +1,8 @@
+cc=gcc
+cflags= -I./include
+
+bin=sqrt 
+
+image:$(bin)
+
+sqrt:src/sqrt.c
