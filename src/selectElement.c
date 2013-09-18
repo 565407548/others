@@ -39,6 +39,7 @@ void selectElement2(int *arr,int m){
   }
 }
 
+// ./bin/selectElement <data/selectElement
 int main(int argc, char *argv[])
 {
   int i,m;
@@ -50,9 +51,5 @@ int main(int argc, char *argv[])
   for(i=0;i<m;i++){
     printf("%d ",arr[i]);
   }
-  /* for(i=0;i<=1000;i++){ */
-  /*   printf("%d ",i); */
-  /* } */
-  
   return 0;
 }
